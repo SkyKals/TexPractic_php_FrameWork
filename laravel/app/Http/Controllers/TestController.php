@@ -6,7 +6,7 @@ use App\Models\Notification;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class NotificationController extends Controller
+class TestController extends Controller
 {
     public function index(): JsonResponse
     {
