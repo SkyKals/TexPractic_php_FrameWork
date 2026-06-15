@@ -145,12 +145,44 @@ Import the collection files into Postman:
 
 ---
 
+## AI Agents
+
+The project ships with four **Claude Code subagents** in `.claude/agents/`. Each is a specialized assistant with a focused role and a restricted toolset:
+
+| Agent | Role | Responsibility |
+|-------|------|----------------|
+| `dev` | PHP Developer | Writes and edits PHP code (controllers, models, entities, migrations, routes) for Laravel and Symfony following PSR-12, JSON-only APIs, SQLite, and input validation. |
+| `reviewer` | Code Reviewer | Checks that all five CRUD endpoints exist, HTTP status codes are correct (200/201/404/422), input is validated, and Laravel/Symfony stay in parity. Reports only, never edits. |
+| `git-manager` | Git Engineer | Manages branches, commits and merges: branches from `dev`, Conventional Commits, merges only with `--no-ff`, never pushes directly to `main`. |
+| `docs-writer` | Technical Writer | Creates and maintains API documentation and Postman collections strictly from the real code. |
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [`docs/API.md`](docs/API.md) | Full API reference for both frameworks — endpoints, request/response examples, status codes, curl examples, validation rules. |
+| [`docs/PROMPTS.md`](docs/PROMPTS.md) | Chronological log of the AI prompts used to build the project. |
+| [`CLAUDE.md`](CLAUDE.md) | Developer/agent guide — repository structure, git rules, model and endpoint reference. |
+
+---
+
 ## Project Structure
 
 ```
 frameworks/
-├── laravel/            # Laravel 11 application
-├── symfony/            # Symfony 7 application
+├── .claude/
+│   └── agents/         # Claude Code subagents
+│       ├── dev.md
+│       ├── reviewer.md
+│       ├── git-manager.md
+│       └── docs-writer.md
+├── docs/
+│   ├── API.md          # Full API documentation
+│   └── PROMPTS.md      # AI prompt log
+├── laravel/            # Laravel application
+├── symfony/            # Symfony application
 ├── postman/
 │   ├── laravel.json    # Postman collection (Laravel)
 │   └── symfony.json    # Postman collection (Symfony)
