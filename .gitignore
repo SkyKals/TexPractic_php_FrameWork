@@ -1,0 +1,29 @@
+# Laravel
+laravel/vendor/
+laravel/.env
+laravel/storage/logs/
+laravel/storage/framework/cache/
+laravel/storage/framework/sessions/
+laravel/storage/framework/views/
+laravel/bootstrap/cache/
+laravel/node_modules/
+
+# Symfony
+symfony/vendor/
+symfony/.env.local
+symfony/var/
+symfony/node_modules/
+
+# DB
+*.sqlite
+*.sqlite-journal
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
