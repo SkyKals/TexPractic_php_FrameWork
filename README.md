@@ -163,6 +163,7 @@ The project ships with four **Claude Code subagents** in `.claude/agents/`. Each
 | Document | Description |
 |----------|-------------|
 | [`docs/API.md`](docs/API.md) | Full API reference for both frameworks — endpoints, request/response examples, status codes, curl examples, validation rules. |
+| [`docs/ENDPOINTS.md`](docs/ENDPOINTS.md) | Frontend-oriented endpoint guide — per-operation request/response examples and ready-to-use `fetch` snippets. |
 | [`docs/PROMPTS.md`](docs/PROMPTS.md) | Chronological log of the AI prompts used to build the project. |
 | [`CLAUDE.md`](CLAUDE.md) | Developer/agent guide — repository structure, git rules, model and endpoint reference. |
 
@@ -180,6 +181,7 @@ frameworks/
 │       └── docs-writer.md
 ├── docs/
 │   ├── API.md          # Full API documentation
+│   ├── ENDPOINTS.md    # Frontend endpoint guide (fetch examples)
 │   └── PROMPTS.md      # AI prompt log
 ├── laravel/            # Laravel application
 ├── symfony/            # Symfony application
