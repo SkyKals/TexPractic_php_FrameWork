@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
-Route::apiResource('notifications', NotificationController::class);
+Route::apiResource('notifications', TestController::class);

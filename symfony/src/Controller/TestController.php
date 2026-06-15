@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/api/notifications')]
-class NotificationController extends AbstractController
+class TestController extends AbstractController
 {
     public function __construct(private EntityManagerInterface $em) {}
 
@@ -121,6 +121,6 @@ class NotificationController extends AbstractController
         $this->em->remove($notification);
         $this->em->flush();
 
-        return new JsonResponse(['message' => 'Deleted'], 200);
+        return new JsonResponse(['message' => 'Notification deleted'], 200);
     }
 }
